@@ -3,6 +3,23 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.ar.sceneform.plugin'
 
+// https://developers.google.com/sceneform/develop/import-assets
+// https://developers.google.com/sceneform/develop/animation/obtaining-assets
+sceneform.asset(
+        'sampledata/models/walking.fbx',
+        'default',
+        'sampledata/models/walking.sfa',
+        'src/main/res/raw/walking'
+)
+
+sceneform.asset(
+        'sampledata/models/andy_dance.fbx',
+        'default',
+        'sampledata/models/andy_dance.sfa',
+        'src/main/res/raw/andy_dance',
+        ['sampledata/models/andy_wave_r.fbx', 'sampledata/models/andy_wave_l.fbx'] // animations
+)
+
 android {
     compileSdkVersion 33
 
